@@ -1,0 +1,147 @@
+﻿[
+    {
+        "file":  "/assets/chesedphilly/logo.png",
+        "filename":  "logo.png",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/Blue_Charity_Foundation_Hands_and_Heart_Simple_Logo_8.png?v=1746205062\u0026width=600",
+        "pages":  [
+                      "all"
+                  ],
+        "bytes":  37919
+    },
+    {
+        "file":  "/assets/chesedphilly/rabbinic-support.png",
+        "filename":  "rabbinic-support.png",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/1774149187687-eeefe32f-df57-4a7e-80f9-567e72f62687_1.png?v=1782247821\u0026width=1500",
+        "pages":  [
+                      "home"
+                  ],
+        "bytes":  114476
+    },
+    {
+        "file":  "/assets/chesedphilly/tomchei-shabbos-card.jpg",
+        "filename":  "tomchei-shabbos-card.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/Tomchei_Shabbos_5.5_x_4.25_in_1.jpg?v=1748621946\u0026width=1500",
+        "pages":  [
+                      "home"
+                  ],
+        "bytes":  267733
+    },
+    {
+        "file":  "/assets/chesedphilly/donate.jpg",
+        "filename":  "donate.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/WhatsApp_Image_2026-06-23_at_3.20.58_PM.jpg?v=1782242540\u0026width=1500",
+        "pages":  [
+                      "home"
+                  ],
+        "bytes":  313290
+    },
+    {
+        "file":  "/assets/chesedphilly/tomchei-shabbos-banner.png",
+        "filename":  "tomchei-shabbos-banner.png",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/Mobile_Banner_1.png?v=1742570848\u0026width=3840",
+        "pages":  [
+                      "tomchei-shabbos"
+                  ],
+        "bytes":  3134462
+    },
+    {
+        "file":  "/assets/chesedphilly/tomchei-shabbos-video-thumbnail.jpg",
+        "filename":  "tomchei-shabbos-video-thumbnail.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/files/preview_images/d54f8e90758e4d5bb57e3b666102b52a.thumbnail.0000000000_1100x.jpg?v=1742517557",
+        "pages":  [
+                      "tomchei-shabbos"
+                  ],
+        "bytes":  89185
+    },
+    {
+        "file":  "/assets/chesedphilly/about-5.jpg",
+        "filename":  "about-5.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/5.jpg?v=1748622885",
+        "pages":  [
+                      "about-us"
+                  ],
+        "bytes":  506142
+    },
+    {
+        "file":  "/assets/chesedphilly/about-6.jpg",
+        "filename":  "about-6.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/6.jpg?v=1748622935",
+        "pages":  [
+                      "about-us"
+                  ],
+        "bytes":  1728495
+    },
+    {
+        "file":  "/assets/chesedphilly/about-8.jpg",
+        "filename":  "about-8.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/8.jpg?v=1748623086",
+        "pages":  [
+                      "about-us"
+                  ],
+        "bytes":  386310
+    },
+    {
+        "file":  "/assets/chesedphilly/raffle-dreidel.png",
+        "filename":  "raffle-dreidel.png",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/Every_raffle_entry_gets_you_a_chance_to_spin_the_dreidel_to_win_instant_prizes.png?v=1765502781",
+        "pages":  [
+                      "raffle",
+                      "blogs/news/raffle"
+                  ],
+        "bytes":  1488837
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-jewish-womens-conference.jpg",
+        "filename":  "blog-jewish-womens-conference.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/IMG-20241204-WA0029_1_480x480.jpg?v=1733949520",
+        "pages":  [
+                      "blogs/community-events/16-annual-jewish-womens-conference"
+                  ],
+        "bytes":  53412
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-superpowers.jpg",
+        "filename":  "blog-superpowers.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/superpowers_480x480.jpg?v=1733258718",
+        "pages":  [
+                      "blogs/community-events"
+                  ],
+        "bytes":  68368
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-untitled-design.jpg",
+        "filename":  "blog-untitled-design.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/articles/Untitled_design.jpg?v=1733949581",
+        "pages":  [
+                      "blogs/community-events"
+                  ],
+        "bytes":  334008
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-untitled-design-2.jpg",
+        "filename":  "blog-untitled-design-2.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/articles/Untitled_design_2.jpg?v=1733259682",
+        "pages":  [
+                      "blogs/community-events/shuk-to-the-core"
+                  ],
+        "bytes":  83497
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-untitled-design-3.jpg",
+        "filename":  "blog-untitled-design-3.jpg",
+        "sourceUrl":  "https://www.chesedphilly.org/cdn/shop/articles/Untitled_design_3.jpg?v=1733261854",
+        "pages":  [
+                      "blogs/community-events/young-israel-of-the-main-line-sisterhood-melave-malka"
+                  ],
+        "bytes":  164978
+    },
+    {
+        "file":  "/assets/chesedphilly/blog-whatsapp-2024-12-02.jpg",
+        "filename":  "blog-whatsapp-2024-12-02.jpg",
+        "sourceUrl":  "https://cdn.shopify.com/s/files/1/0840/5208/3005/files/WhatsApp_Image_2024-12-02_at_22.47.14_a2e344bb_480x480.jpg?v=1733261823",
+        "pages":  [
+                      "blogs/community-events"
+                  ],
+        "bytes":  60104
+    }
+]
