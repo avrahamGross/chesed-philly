@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/ui/reveal";
 import {
   Card,
   CardContent,
@@ -24,18 +25,24 @@ export function ProgramsSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {programs.map((program) => (
-            <Card key={program.title} className="flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-primary">{program.title}</CardTitle>
-                <CardDescription className="text-base">{program.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="mt-auto">
-                <Button asChild variant="outline">
-                  <Link href={program.href}>Read more</Link>
-                </Button>
-              </CardContent>
-            </Card>
+          {programs.map((program, index) => (
+            <Reveal
+              key={program.title}
+              animation={`animate-in fade-in slide-in-from-bottom duration-700 delay-${150 + index * 100} ease-out`}
+              className="flex flex-col"
+            >
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="text-primary">{program.title}</CardTitle>
+                  <CardDescription className="text-base">{program.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="mt-auto">
+                  <Button asChild variant="outline">
+                    <Link href={program.href}>Read more</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>

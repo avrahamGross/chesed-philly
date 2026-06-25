@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Reveal } from "@/components/ui/reveal";
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ export function NewsletterSection() {
 
   return (
     <section className="px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto max-w-lg space-y-6 text-center">
+      <Reveal className="mx-auto max-w-lg space-y-6 text-center" animation="animate-in fade-in slide-in-from-bottom duration-700 ease-out">
         <h2 className="text-3xl font-bold text-primary">Subscribe to our emails</h2>
         <p className="text-muted-foreground">
           Subscribe to our mailing list for announcements and news from Chesed Philly.
@@ -44,7 +45,7 @@ export function NewsletterSection() {
             </Button>
           </form>
         )}
-      </div>
+      </Reveal>
     </section>
   );
 }

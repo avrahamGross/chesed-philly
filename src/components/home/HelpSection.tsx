@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/ui/reveal";
 
 export function HelpSection() {
   return (
     <section className="bg-muted/50 px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
-        <div className="space-y-4 rounded-xl bg-primary p-8 text-primary-foreground md:p-10">
+        <Reveal className="space-y-4 rounded-xl bg-primary p-8 text-primary-foreground md:p-10" animation="animate-in fade-in slide-in-from-left duration-700 ease-out">
           <p className="text-sm font-semibold tracking-widest uppercase opacity-85">
             I want to help
           </p>
@@ -17,9 +18,9 @@ export function HelpSection() {
           <Button asChild variant="accent">
             <Link href="/donate">Find out more</Link>
           </Button>
-        </div>
+        </Reveal>
 
-        <div className="space-y-4 rounded-xl border bg-card p-8 shadow-sm md:p-10">
+        <Reveal className="space-y-4 rounded-xl border bg-card p-8 shadow-sm md:p-10" animation="animate-in fade-in slide-in-from-right duration-700 delay-150 ease-out">
           <p className="text-sm font-semibold tracking-widest text-primary uppercase">
             I need help
           </p>
@@ -33,7 +34,7 @@ export function HelpSection() {
           <Button asChild variant="outline">
             <Link href="/social-services">Find out more</Link>
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DonationForm } from "@/components/donate/DonationForm";
 import { PageHero } from "@/components/layout/PageHero";
+import { Reveal } from "@/components/ui/reveal";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -17,10 +18,10 @@ export default function DonatePage() {
         description="The community's financial support is vital to this mission. Every donor dollar more than doubles by the time it reaches someone's Shabbos table."
       />
 
-      <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.1fr_0.9fr]">
+      <Reveal animation="animate-in fade-in slide-in-from-left duration-700 ease-out" className="mx-auto grid max-w-7xl items-start gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.1fr_0.9fr]">
         <DonationForm />
 
-        <div className="space-y-6">
+        <Reveal animation="animate-in fade-in slide-in-from-right duration-700 delay-150 ease-out" className="space-y-6">
           <div className="space-y-3 rounded-xl bg-muted p-6">
             <h2 className="text-lg font-semibold text-primary">Your gift multiplies</h2>
             <p className="text-muted-foreground">
@@ -45,8 +46,8 @@ export default function DonatePage() {
               and we&apos;ll be happy to assist.
             </p>
           </div>
-        </div>
-      </div>
+        </Reveal>
+      </Reveal>
     </>
   );
 }

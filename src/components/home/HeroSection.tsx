@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/ui/reveal";
 import { heroSlides } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +15,7 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-        <div className="max-w-3xl space-y-6">
+        <Reveal className="max-w-3xl space-y-6" animation="animate-in fade-in zoom-in duration-700 ease-out">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase">
             {slide.eyebrow}
           </p>
@@ -35,9 +36,10 @@ export function HeroSection() {
               <Link href="/donate">Donate today</Link>
             </Button>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 flex gap-2">
+        <Reveal animation="animate-in fade-in slide-in-from-bottom duration-700 delay-150 ease-out" className="mt-10 flex gap-2">
+          <>
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -50,7 +52,8 @@ export function HeroSection() {
               )}
             />
           ))}
-        </div>
+          </>
+        </Reveal>
       </div>
     </section>
   );
