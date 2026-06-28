@@ -15,9 +15,9 @@ import { site } from "@/lib/content";
 
 export function Footer() {
   return (
-    <Box as="footer" bg="brand.emphasized" color="brand.contrast" mt="auto">
+    <Box as="footer" bg="brand.950" color="brand.contrast" mt="auto">
       <Container maxW="7xl" py={12}>
-        <Grid templateColumns={{ base: "1fr", md: "1.2fr 1fr 1fr" }} gap={10}>
+        <Grid templateColumns={{ base: "1fr", md: "1.4fr 1fr 1fr" }} gap={10}>
           <Stack gap={4}>
             <Heading size="md">{site.name}</Heading>
             <Text fontSize="sm" opacity={0.9}>
@@ -29,22 +29,19 @@ export function Footer() {
           </Stack>
 
           <Stack gap={3}>
-            <Heading size="sm" textTransform="uppercase" letterSpacing="wider" opacity={0.8}>
-              Quick Links
+            <Heading size="sm" textTransform="uppercase" letterSpacing="wider" opacity={0.7}>
+              Explore
             </Heading>
             {mainNav.map((item) => (
               <Link key={item.href} asChild fontSize="sm" opacity={0.9} _hover={{ opacity: 1 }}>
                 <NextLink href={item.href}>{item.label}</NextLink>
               </Link>
             ))}
-            <Link asChild fontSize="sm" opacity={0.9} _hover={{ opacity: 1 }}>
-              <NextLink href="/donate">Donate</NextLink>
-            </Link>
           </Stack>
 
           <Stack gap={3}>
-            <Heading size="sm" textTransform="uppercase" letterSpacing="wider" opacity={0.8}>
-              Contact
+            <Heading size="sm" textTransform="uppercase" letterSpacing="wider" opacity={0.7}>
+              Get in touch
             </Heading>
             <Text fontSize="sm" opacity={0.9}>
               Warehouse: {site.warehouseAddress}
@@ -69,10 +66,10 @@ export function Footer() {
         <Separator my={8} borderColor="whiteAlpha.300" />
 
         <HStack justify="space-between" flexWrap="wrap" gap={3}>
-          <Text fontSize="sm" opacity={0.8}>
+          <Text fontSize="sm" opacity={0.75}>
             © {new Date().getFullYear()} {site.name}
           </Text>
-          <Text fontSize="sm" opacity={0.8}>
+          <Text fontSize="sm" opacity={0.75}>
             Chesed Philly is a 501(c)(3) tax-exempt organization.
           </Text>
         </HStack>

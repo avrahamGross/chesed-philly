@@ -23,16 +23,16 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box as="header" bg="brand.solid" color="brand.contrast" shadow="sm">
-      <Container maxW="7xl" py={3}>
+    <Box as="header" bg="white" color="brand.950" shadow="sm">
+      <Container maxW="7xl" py={4}>
         <Flex align="center" justify="space-between" gap={4}>
           <Link asChild _hover={{ textDecoration: "none" }}>
             <NextLink href="/">
               <Stack gap={0}>
-                <Heading size="lg" fontWeight="bold" letterSpacing="tight">
+                <Heading size="lg" fontWeight="black" letterSpacing="tight" textTransform="uppercase">
                   {site.name}
                 </Heading>
-                <Text fontSize="xs" opacity={0.85} display={{ base: "none", md: "block" }}>
+                <Text fontSize="xs" opacity={0.75} display={{ base: "none", md: "block" }}>
                   {site.dedication}
                 </Text>
               </Stack>
@@ -55,7 +55,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild size="sm" bg="accent.solid" color="accent.contrast" _hover={{ bg: "gold.600" }}>
-              <NextLink href="/donate">Donate Today</NextLink>
+              <NextLink href="/donate">Donate</NextLink>
             </Button>
           </HStack>
 
