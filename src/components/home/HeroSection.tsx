@@ -14,14 +14,29 @@ import { homepageHero } from "@/lib/content";
 
 export function HeroSection() {
   return (
-    <Box bg="brand.950" color="brand.contrast" position="relative" overflow="hidden">
+    <Box
+      bg="brand.950"
+      bgImage="url('/assets/chesedphilly/Screenshot 2026-06-27 225802.png')"
+      bgPos="center"
+      bgSize="cover"
+      bgRepeat="no-repeat"
+      color="brand.contrast"
+      position="relative"
+      overflow="hidden"
+    >
+      <Box
+        position="absolute"
+        inset={0}
+        bg="black"
+        opacity={0.35}
+      />
       <Box
         position="absolute"
         inset={0}
         bgGradient="to-br"
         gradientFrom="brand.950"
         gradientTo="brand.800"
-        opacity={0.92}
+        opacity={0.65}
       />
       <Container maxW="7xl" py={{ base: 20, md: 28 }} position="relative">
         <Stack gap={6} maxW="3xl">

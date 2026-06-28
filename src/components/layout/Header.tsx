@@ -11,6 +11,7 @@ import {
   Flex,
   Heading,
   HStack,
+  Image,
   Link,
   Portal,
   Stack,
@@ -28,6 +29,7 @@ export function Header() {
         <Flex align="center" justify="space-between" gap={4}>
           <Link asChild _hover={{ textDecoration: "none" }}>
             <NextLink href="/">
+                  <Image src="/assets/chesedphilly/logo.png" alt={site.name} boxSize={12} objectFit="contain" mr={2} display="inline-block" />
               <Stack gap={0}>
                 <Heading size="lg" fontWeight="black" letterSpacing="tight" textTransform="uppercase">
                   {site.name}

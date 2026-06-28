@@ -1,3 +1,6 @@
+import { FaDollarSign, FaTruck } from "react-icons/fa6";
+import { BsFillHouseHeartFill } from "react-icons/bs";
+
 export const site = {
   name: "Chesed Philly",
   tagline: "A helping hand for families across Greater Philadelphia.",
@@ -9,28 +12,31 @@ export const site = {
 
 export const homepageHero = {
   eyebrow: "Tomchei Shabbos",
-  title: "No family in our community should go hungry on Shabbos.",
+  title: "No family should worry about the Shabbos table",
   description:
-    "Chesed Philly brings together volunteers, donors, and community leaders to deliver Shabbos grocery support with dignity, discretion, and respect.",
+    "Together, our community ensures that families experiencing hardship have the food they need to celebrate Shabbos with joy.",
   primaryCta: { label: "Donate now", href: "/donate" },
   secondaryCta: { label: "Volunteer", href: "/volunteer" },
 } as const;
 
 export const homepageFeatures = [
   {
-    title: "Real help, real families",
+    icon: <BsFillHouseHeartFill />,
+    title: "Neighbors in need",
     description:
-      "A parent who lost a job, an elderly couple on a fixed pension, or a family hit by sudden illness — the common denominator is need, and we answer it with compassion.",
+      "When families face job loss, health challenges or unexpected expenses they can be forced to choose between paying the bills and putting food on the table.",
   },
   {
+    icon: <FaTruck />,
     title: "Delivered to the door",
     description:
-      "Volunteers pack and deliver groceries directly to recipients’ homes every week, preserving dignity and privacy for every family we serve.",
+      "Dedicated volunteers come together each week to pack and discreetly deliver boxes of food to families in need.",
   },
   {
+    icon: <FaDollarSign />,
     title: "Your dollar goes far",
     description:
-      "No salaries and minimal overhead mean more of every donation goes straight toward food and essential support for families in need.",
+      "Your dollar goes further. With no salaries and minimal overhead, every donation is maximized to provide nearly twice the value in food and support for families in need.",
   },
 ] as const;
 
@@ -105,7 +111,8 @@ export const donationFunds = [
 export const donationAmounts = [36, 72, 180, 360, 720] as const;
 
 export const impactStats = [
-  { value: "500+", label: "Families supported annually" },
-  { value: "95%", label: "Food dollars purchased directly" },
-  { value: "100%", label: "Volunteer-driven chesed" },
+  { value: "100+", label: "Families supported weekly" },
+  { value: "3,500+", label: "Pounds of food distributed weekly" },
+  { value: "100%", label: "Volunteer driven" },
+  { value: "9", label: "Communities assisted" },
 ] as const;
