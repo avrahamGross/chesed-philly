@@ -4,11 +4,12 @@ type PageHeroProps = {
   eyebrow?: string;
   title: string;
   description?: string;
+  textColorOverride?: string;
 };
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, textColorOverride }: PageHeroProps) {
   return (
-    <Box bg="brand.emphasized" color="brand.contrast" py={{ base: 12, md: 16 }}>
+    <Box bg="brand.emphasized" color="brand.contrast" py={{ base: 10, md: 12 }}>
       <Container maxW="4xl">
         <Stack gap={4} textAlign="center">
           {eyebrow ? (
@@ -16,7 +17,9 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
               {eyebrow}
             </Text>
           ) : null}
-          <Heading size={{ base: "2xl", md: "4xl" }}>{title}</Heading>
+          <Heading size={{ base: "2xl", md: "4xl" }} color={textColorOverride}>
+            {title}
+          </Heading>
           {description ? (
             <Text fontSize="lg" opacity={0.92}>
               {description}

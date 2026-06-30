@@ -10,8 +10,10 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { FaRegEnvelope , FaInstagram } from "react-icons/fa6";
 import { mainNav } from "@/lib/nav";
 import { site } from "@/lib/content";
+import { LiaWarehouseSolid } from "react-icons/lia";
 
 export function Footer() {
   return (
@@ -23,9 +25,6 @@ export function Footer() {
             <Text fontSize="sm" opacity={0.9}>
               {site.tagline}
             </Text>
-            <Text fontSize="sm" fontStyle="italic" opacity={0.85}>
-              {site.dedication}
-            </Text>
           </Stack>
 
           <Stack gap={3}>
@@ -33,7 +32,7 @@ export function Footer() {
               Explore
             </Heading>
             {mainNav.map((item) => (
-              <Link key={item.href} asChild fontSize="sm" opacity={0.9} _hover={{ opacity: 1 }}>
+              <Link key={item.href} asChild color="white" fontSize="sm" opacity={0.9} _hover={{ opacity: 1 }}>
                 <NextLink href={item.href}>{item.label}</NextLink>
               </Link>
             ))}
@@ -43,23 +42,42 @@ export function Footer() {
             <Heading size="sm" textTransform="uppercase" letterSpacing="wider" opacity={0.7}>
               Get in touch
             </Heading>
+            <HStack gap={2} align="start">
+              <Box color="white" mt="1">
+                <FaRegEnvelope  />
+              </Box>
+              <Link asChild color="white" fontSize="sm" opacity={0.9} _hover={{ opacity: 1 }} href={`mailto:${site.email}`}>
+                <a>{site.email}</a>
+              </Link>
+            </HStack>
+            <HStack gap={2} align="start">
+              <Box color="white" mt="1">
+                <FaInstagram />
+              </Box>
+              <Link
+                asChild
+                fontSize="sm"
+                opacity={0.9}
+                _hover={{ opacity: 1 }}
+                href={site.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                color="white"
+              >
+                <a>Instagram - Chesed Philly</a>
+              </Link>
+            </HStack>
+            <HStack gap={2} align="start">
+            <Box color="white" mt="1">
+              <LiaWarehouseSolid />
+              </Box>
             <Text fontSize="sm" opacity={0.9}>
-              Warehouse: {site.warehouseAddress}
+              {site.warehouseAddress}
             </Text>
+            </HStack>
             <Text fontSize="sm" opacity={0.9}>
-              501(c)(3) Tax ID: {site.taxId}
+              Tax ID: {site.taxId}
             </Text>
-            <Link
-              asChild
-              fontSize="sm"
-              opacity={0.9}
-              _hover={{ opacity: 1 }}
-              href={site.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <a>Instagram</a>
-            </Link>
           </Stack>
         </Grid>
 

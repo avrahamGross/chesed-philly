@@ -26,9 +26,7 @@ export function MissionSection() {
                 <Card.Body p={6}>
                   <Stack gap={4} h="full">
                     <Heading size="lg" color="brand.950">
-                      <Icon boxSize={6} color="gold.500" mr={2}>
-                        {feature.icon}
-                      </Icon>
+                      <Icon as={feature.icon} boxSize={6} color="gold.500" mr={2} />
                       {feature.title}
                     </Heading>
                     <Text color="gray.600" flex="1">

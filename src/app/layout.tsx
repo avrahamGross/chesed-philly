@@ -19,6 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/assets/chesedphilly/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/chesedphilly/logo.png" />
+      </head>
       <body>
         <Provider>
           <SiteLayout>{children}</SiteLayout>
