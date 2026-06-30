@@ -25,7 +25,7 @@ export function HelpSection() {
                 more than doubles by the time it reaches someone&apos;s Shabbos table.
               </Text>
               <Button asChild alignSelf="start" bg="accent.solid" color="accent.contrast">
-                <NextLink href="/donate">Find out more</NextLink>
+                <NextLink href="/donate">Donate</NextLink>
               </Button>
             </Stack>
           </Box>
@@ -43,7 +43,7 @@ export function HelpSection() {
                 Reach out to learn about Tomchei Shabbos and other assistance.
               </Text>
               <Button asChild alignSelf="start" variant="outline" borderColor="brand.solid" color="brand.solid">
-                <NextLink href="/social-services">Find out more</NextLink>
+                <NextLink target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf4-byqqV5ECWCe3SphFwy_SNhsORJOjYcFPrvifV6aqInY9A/viewform">Apply</NextLink>
               </Button>
             </Stack>
           </Box>

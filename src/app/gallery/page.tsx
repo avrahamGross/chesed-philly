@@ -14,7 +14,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Moments from our community work"
-        description="A look at volunteers, deliveries, and the people we serve as we work together to support families in need."
+        description="A look at volunteers, deliveries, and events as we work together to support families in need."
       />
 
       <Container maxW="3xl" py={{ base: 10, md: 14 }}>

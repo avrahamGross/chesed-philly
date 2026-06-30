@@ -8,6 +8,7 @@ export const site = {
   taxId: "35-2861084",
   warehouseAddress: "7715 Montgomery Ave, Elkins Park, PA 19027",
   instagram: "https://www.instagram.com/chesedphilly/",
+  email: "info@chesedphilly.org",
 } as const;
 
 export const homepageHero = {
@@ -21,19 +22,19 @@ export const homepageHero = {
 
 export const homepageFeatures = [
   {
-    icon: <BsFillHouseHeartFill />,
+    icon: BsFillHouseHeartFill,
     title: "Neighbors in need",
     description:
       "When families face job loss, health challenges or unexpected expenses they can be forced to choose between paying the bills and putting food on the table.",
   },
   {
-    icon: <FaTruck />,
+    icon: FaTruck,
     title: "Delivered to the door",
     description:
       "Dedicated volunteers come together each week to pack and discreetly deliver boxes of food to families in need.",
   },
   {
-    icon: <FaDollarSign />,
+    icon: FaDollarSign,
     title: "Your dollar goes far",
     description:
       "Your dollar goes further. With no salaries and minimal overhead, every donation is maximized to provide nearly twice the value in food and support for families in need.",
@@ -77,12 +78,6 @@ export const programs = [
       "A curated guide to local resources and gemachs that help community members through everyday needs.",
     href: "/community-resources",
   },
-  {
-    title: "Social Services",
-    description:
-      "Confidential guidance and referrals for families navigating financial hardship, illness, or other urgent challenges.",
-    href: "/social-services",
-  },
 ] as const;
 
 export const donationFunds = [
@@ -116,3 +111,56 @@ export const impactStats = [
   { value: "100%", label: "Volunteer driven" },
   { value: "9", label: "Communities assisted" },
 ] as const;
+
+export const organization = {
+  rabbinicAdvisoryBoard: [
+    {
+      name: "Rabbi Reuven Goldstein",
+      title: "Rav of Chesed Philly and Young Israel of Elkins Park, Member of Beis Din of Philadelphia",
+    },
+    {
+      name: "Rabbi Mordechai Terebelo",
+      title: "Av Beis Din of Elkins Park & Rav of Ahavas Torah",
+    },
+    {
+      name: "Rabbi Meir Riber",
+      title: "Rosh Kollel & Rav of the Somerton community",
+    },
+  ],
+  boardOfDirectors: [
+    {
+      name: "Mrs. Sima Chana Coe",
+      title: "Founder and President",
+    },
+    {
+      name: "Mr. David Coe",
+      title: "Founder and Vice-President",
+    },
+    {
+      name: "Mr. Yossi Lichter",
+      title: "Treasurer",
+    },
+    {
+      name: "Mr. Dov Simons",
+      title: "Secretary",
+    },
+    {
+      name: "Rabbi Shloime Hershkop",
+      title: "Member at large",
+    },
+  ],
+  staff: [
+    {
+      name: "Mrs. Chana Feinberg",
+      title: "Operations Manager",
+    },
+    {
+      name: "Mr. Yossi Brodsky",
+      title: "Operations",
+    },
+    {
+      name: "Mrs. Onit Zisserman",
+      title: "Volunteer Coordinator",
+    },
+  ],
+} as const;
