@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
   Button,
   Card,
@@ -9,33 +9,25 @@ import {
   Heading,
   Input,
   RadioCard,
-  Separator,
   SimpleGrid,
   Stack,
   Text,
   Textarea,
 } from "@chakra-ui/react";
-import { donationAmounts, donationFunds, site } from "@/lib/content";
+import { site } from "@/lib/content";
 
-type DonationFrequency = "one-time" | "monthly";
+const WEEKLY_AMOUNTS = [5, 10, 25, 50, 100, 150] as const;
 
-export function DonationForm() {
-  const [frequency, setFrequency] = useState<DonationFrequency>("one-time");
-  const [selectedAmount, setSelectedAmount] = useState<string>("180");
+export function ChesedPhillyFamily() {
+  const [selectedAmount, setSelectedAmount] = useState<string>("25");
   const [customAmount, setCustomAmount] = useState("");
-  const [fund, setFund] = useState<string>(donationFunds[0].id);
   const [submitted, setSubmitted] = useState(false);
 
-  const amount = useMemo(() => {
-    if (selectedAmount === "custom") {
-      const parsed = Number(customAmount);
-      return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
-    }
-    return Number(selectedAmount);
-  }, [customAmount, selectedAmount]);
+  const amount = selectedAmount === "custom" ? (Number(customAmount) || 0) : Number(selectedAmount);
 
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
+    if (amount <= 0) return;
     setSubmitted(true);
   }
 
@@ -45,12 +37,11 @@ export function DonationForm() {
         <Card.Body p={{ base: 6, md: 8 }}>
           <Stack gap={4} textAlign="center">
             <Heading size="lg" color="brand.emphasized">
-              Thank you for your generosity
+              Thank you for joining Chesed Philly Family
             </Heading>
             <Text color="gray.600">
-              Your {frequency === "monthly" ? "monthly " : ""}pledge of ${amount.toLocaleString()}{" "}
-              to {donationFunds.find((item) => item.id === fund)?.label} has been recorded. Payment
-              processing will be connected in a future step.
+              Your weekly pledge of ${amount.toLocaleString()} has been recorded. Payment processing
+              will be connected in a future step.
             </Text>
             <Text fontSize="sm" color="gray.500">
               Tax ID: {site.taxId}
@@ -68,56 +59,30 @@ export function DonationForm() {
           <Stack gap={8}>
             <Stack gap={4}>
               <Heading size="md" color="brand.emphasized">
-                Donation type
+                Become a Chesed Philly Family
               </Heading>
-              <RadioCard.Root
-                value={frequency}
-                onValueChange={(details) => setFrequency(details.value as DonationFrequency)}
-              >
-                <SimpleGrid columns={{ base: 1, sm: 2 }} gap={3}>
-                  <RadioCard.Item value="one-time">
-                    <RadioCard.ItemHiddenInput />
-                    <RadioCard.ItemControl>
-                      <RadioCard.ItemContent>
-                        <RadioCard.ItemText>One-time Donation</RadioCard.ItemText>
-                        <RadioCard.ItemDescription>
-                          Make a single donation today
-                        </RadioCard.ItemDescription>
-                      </RadioCard.ItemContent>
-                      <RadioCard.ItemIndicator />
-                    </RadioCard.ItemControl>
-                  </RadioCard.Item>
-                  <RadioCard.Item value="monthly">
-                    <RadioCard.ItemHiddenInput />
-                    <RadioCard.ItemControl>
-                      <RadioCard.ItemContent>
-                        <RadioCard.ItemText>Monthly partner</RadioCard.ItemText>
-                        <RadioCard.ItemDescription>
-                          Sustain families throughout the year
-                        </RadioCard.ItemDescription>
-                      </RadioCard.ItemContent>
-                      <RadioCard.ItemIndicator />
-                    </RadioCard.ItemControl>
-                  </RadioCard.Item>
-                </SimpleGrid>
-              </RadioCard.Root>
+              <Text color="gray.600">
+                Join our community of weekly supporters who ensure families have the food they need
+                for Shabbos every week.
+              </Text>
             </Stack>
 
             <Stack gap={4}>
               <Heading size="md" color="brand.emphasized">
-                Select an amount
+                Select a weekly amount
               </Heading>
               <RadioCard.Root
                 value={selectedAmount}
-                onValueChange={(details) => setSelectedAmount(details.value ?? "180")}
+                onValueChange={(details) => setSelectedAmount(details.value ?? "25")}
               >
-                <SimpleGrid columns={{ base: 2, sm: 3 }} gap={3}>
-                  {donationAmounts.map((value) => (
+                <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} gap={3}>
+                  {WEEKLY_AMOUNTS.map((value) => (
                     <RadioCard.Item key={value} value={String(value)}>
                       <RadioCard.ItemHiddenInput />
                       <RadioCard.ItemControl>
                         <RadioCard.ItemContent>
                           <RadioCard.ItemText>${value}</RadioCard.ItemText>
+                          <RadioCard.ItemDescription>per week</RadioCard.ItemDescription>
                         </RadioCard.ItemContent>
                         <RadioCard.ItemIndicator />
                       </RadioCard.ItemControl>
@@ -137,7 +102,7 @@ export function DonationForm() {
 
               {selectedAmount === "custom" ? (
                 <Field.Root required>
-                  <Field.Label>Custom amount</Field.Label>
+                  <Field.Label>Custom weekly amount</Field.Label>
                   <Input
                     type="number"
                     min={1}
@@ -149,8 +114,6 @@ export function DonationForm() {
                 </Field.Root>
               ) : null}
             </Stack>
-
-            <Separator />
 
             <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
               <Field.Root required>
@@ -180,8 +143,7 @@ export function DonationForm() {
                 _hover={{ bg: "gold.600" }}
                 disabled={amount <= 0}
               >
-                Continue to payment — ${amount.toLocaleString()}
-                {frequency === "monthly" ? " / month" : ""}
+                Continue to payment — ${amount.toLocaleString()} / week
               </Button>
               <Text fontSize="sm" color="gray.500" textAlign="center">
                 Secure payment processing (Stripe or similar) will be integrated here. Chesed Philly
