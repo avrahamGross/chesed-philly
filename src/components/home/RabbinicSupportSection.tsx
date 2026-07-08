@@ -26,17 +26,23 @@ export function RabbinicSupportSection() {
           mt={6}
         />
         <Stack gap={6} textAlign="center">
+          <video
+            src="/assets/chesedphilly/ts_video.mp4"
+            controls
+            style={{ borderRadius: "0.5rem", width: "100%", maxWidth: "560px", margin: "0 auto" }}
+            preload="metadata"
+          />
           <Text fontSize="lg" color="gray.700" lineHeight="tall">
             The community together with the support and encouragement of{" "}
             our esteemed Rabbonim have the power to make sure that the Tomchei
             Shabbos initiative can continue to make deep and lasting impact on families in need in
             our community.
           </Text>
-          <Text fontSize="lg" color="gray.700" lineHeight="tall">
+          {/* <Text fontSize="lg" color="gray.700" lineHeight="tall">
             As a unified community, the individual ask is small but the collective impact
             is tremendous! We welcome you to join the Chesed Philly family and take part in
             this holy community service.
-          </Text>
+          </Text> */}
           <Button asChild alignSelf="center" size="lg" bg="brand.solid" color="brand.contrast">
             <NextLink href="/volunteer">Join the Chesed Philly family</NextLink>
           </Button>
