@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.tagline,
+  icons: {
+    icon: "/assets/chesedphilly/logo.png",
+    apple: "/assets/chesedphilly/logo.png",
+  },
 };
 
 export default function RootLayout({

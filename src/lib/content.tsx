@@ -120,7 +120,7 @@ export const organization = {
     },
     {
       name: "Rabbi Mordechai Terebelo",
-      title: "Av Beis Din of Elkins Park & Rav of Ahavas Torah",
+      title: "Av Beis Din of Philadelphia & Rav of Ahavas Torah",
     },
     {
       name: "Rabbi Meir Riber",
